@@ -7,7 +7,7 @@ interface FooterType {
 }
 
 interface linkType {
-    href: string;
+    name: string;
     link: string;
 }
 
@@ -23,7 +23,7 @@ export const Footer = ({ brand, content, links = [] }: FooterType) => {
                     <div className="linksContainer">
                         {
                             links.map((t) => {
-                                return <a key={t.link.trim()} href={t.href}>{t.link}</a>
+                                return <a key={t.name.trim()} href={t.link}>{t.name}</a>
                             })
                         }
                     </div>

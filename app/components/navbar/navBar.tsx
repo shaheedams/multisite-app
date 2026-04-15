@@ -1,3 +1,4 @@
+"use client"
 import './navBar.css';
 
 interface NavBar {
@@ -6,11 +7,12 @@ interface NavBar {
 }
 
 interface linkType {
-    href: string;
+    name: string;
     link: string;
 }
 
 export const NavBar = ({ brand, links = [] }: NavBar) => {
+
     return (
         <nav>
             <div className="ctm-container ">
@@ -19,7 +21,7 @@ export const NavBar = ({ brand, links = [] }: NavBar) => {
                     <div className="links">
                         {
                             links.map((t) => {
-                                return <div key={t.link.trim()} className="link"><a href={t.href}>{t.link}</a></div>
+                                return <div key={t.name.trim()} className="link"><a href={t.link}>{t.name}</a></div>
                             })
                         }
                     </div>
