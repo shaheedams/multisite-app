@@ -26,6 +26,14 @@ nav {
             font-weight: 600;
             letter-spacing: 4px;
         }
+
+        .customSelect {
+            font-size: 18px;
+            border: 1px solid var(--black);
+            border-radius: 6px;
+            padding: 2px;
+            outline: none;
+        }
     }
 
 }
