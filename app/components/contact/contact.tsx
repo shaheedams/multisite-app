@@ -11,8 +11,8 @@ export const Contact = ({ heading, button }: Contact) => {
             <div className="ctm-container">
                 <div className="contact-container">
                     <div className="heading">{heading}</div>
-                    <a className="contactCta" href={button.link} target="_blank" rel="noopener noreferrer">
-                        {button.name}
+                    <a className="contactCta" href={button?.link} target="_blank" rel="noopener noreferrer">
+                        {button?.name}
                     </a>
                 </div>
             </div>
