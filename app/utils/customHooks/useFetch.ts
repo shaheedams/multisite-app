@@ -35,14 +35,12 @@ export function useFetch<T, A extends unknown[]>(
         } finally {
             setLoading(false);
         }
-    }, [apiMethod]); // Service methods should be stable references
+    }, [apiMethod]);
 
     useEffect(() => {
         if (immediate) {
-            // Cast to satisfy TS for immediate calls with no args
             (execute as () => Promise<T>)().catch(() => { });
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, dependencies);
 
     return { data, loading, error, execute, setData };
